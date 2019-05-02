@@ -25,7 +25,7 @@
     $pass = "dicoding1234!!";
     $db = "beecone";
     try {
-        $conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
+        $conn = new PDO("sqlsrv:server = tcp:beecone.database.windows.net,1433; Database = beecone", "beecone", "dicoding1234!!");
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (Exception $e) {
         echo "Failed: " . $e;
